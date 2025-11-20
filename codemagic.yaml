@@ -2,14 +2,21 @@ workflows:
   unity-ios:
     name: Unity iOS Build & Upload to App Store
 
+    # --- Environment section ---
+    environment:
+      vars:
+        UNITY_VERSION: "6000.0.59f2"   # <-- This is where you put it
+
     scripts:
       - name: Build iOS with Unity
         script: |
           unity-editor \
             -batchmode \
+            -nographics \
             -quit \
             -projectPath . \
-            -executeMethod Build.iOS
+            -executeMethod Build.iOS \
+            -logFile /dev/stdout
 
       - name: Install CocoaPods
         script: |
@@ -22,7 +29,6 @@ workflows:
 
     publishing:
       app_store_connect:
-        # Use App Store Connect API key stored as environment variables
         api_key: $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $KEY_ID
         issuer_id: $ISSUER_ID
