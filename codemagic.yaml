@@ -6,7 +6,7 @@ workflows:
         - unity_credentials        # UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL
         - app_store_connect        # APP_STORE_CONNECT_PRIVATE_KEY, ISSUER_ID, KEY_ID
       vars:
-        UNITY_VERSION: "6000.0.59f2"     # Your Unity version
+        UNITY_VERSION: "6000.0.59f2"
         BUNDLE_ID: "com.cleanfun.aquablastmaster"
 
     scripts:
@@ -46,13 +46,13 @@ workflows:
           cd build/iOS
           pod install || true
 
-     ios_signing:
+    ios_signing:
       app_store_connect:
         api_key: |
           $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $KEY_ID
         issuer_id: $ISSUER_ID
-        bundle_identifier: $BUNDLE_ID
+        bundle_identifier: "com.cleanfun.aquablastmaster"
 
     artifacts:
       - build/iOS/ipa/*.ipa
