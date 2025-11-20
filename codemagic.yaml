@@ -1,0 +1,57 @@
+workflows:
+  unity-ios:
+    name: Unity iOS Build
+    environment:
+      groups:
+        - unity_credentials            # UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL
+        - app_store_connect            # APP_STORE_CONNECT_PRIVATE_KEY, ISSUER_ID, KEY_ID
+      vars:
+        UNITY_VERSION: "2022.3.0f1"     # Set your Unity version
+        BUNDLE_ID: "com.yourcompany.yourgame"
+    scripts:
+      - name: Activate Unity license
+        script: |
+          unity-editor \
+            -batchmode \
+            -nographics \
+            -quit \
+            -logFile /dev/stdout \
+            -serial "$UNITY_SERIAL" \
+            -username "$UNITY_EMAIL" \
+            -password "$UNITY_PASSWORD"
+
+      - name: Build iOS project with Unity
+        script: |
+          unity-editor \
+            -batchmode \
+            -nographics \
+            -quit \
+            -logFile /dev/stdout \
+            -projectPath . \
+            -executeMethod BuildScript.BuildiOS
+
+      - name: Install Cocoapods
+        script: |
+          cd build/iOS
+          pod install
+
+    ios_signing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $KEY_ID
+        issuer_id: $ISSUER_ID
+      bundle_identifier: $BUNDLE_ID
+      provisioning_profiles:
+        - name: ios_profile
+          bundle_identifier: $BUNDLE_ID
+
+    artifacts:
+      - build/iOS/ipa/*.ipa
+      - build/iOS/Unity-iPhone.xcarchive
+
+    publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $KEY_ID
+        issuer_id: $ISSUER_ID
+        submit_to_testflight: true
