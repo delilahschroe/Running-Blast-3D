@@ -1,22 +1,21 @@
 workflows:
   unity-ios:
-    name: Unity iOS Build & Upload to App Store
+    name: Unity iOS Build
 
     environment:
-      vars:
-        UNITY_VERSION: "6000.0.59f2"   # Unity version to install
+      unity: "2022.3.62f2"  # Use a valid Unity version from Codemagic docs
 
     scripts:
+      - name: Print version info
+        script: |
+          echo "UNITY_HOME is $UNITY_HOME"
+          ls -l "$UNITY_HOME"
+
       - name: Build iOS with Unity
         script: |
           #!/usr/bin/env bash
           set -e
-
-          # Full path to Unity executable on Codemagic
-          UNITY_PATH="/Applications/Unity/Hub/Editor/6000.0.59f2/Unity.app/Contents/MacOS/Unity"
-
-          # Build Unity iOS project
-          $UNITY_PATH \
+          "$UNITY_HOME/Contents/MacOS/Unity" \
             -batchmode \
             -nographics \
             -quit \
