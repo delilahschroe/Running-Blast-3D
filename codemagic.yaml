@@ -1,16 +1,33 @@
 workflows:
   unity-ios:
-    name: Unity iOS Build & Upload to App Store
+    name: Unity iOS Build & Upload to App Store
 
     environment:
-      unity: "6000.2.3f1"
+      unity: "2022.3.62f2"    # Supported Unity 2022 LTS version
 
     scripts:
+      - name: Activate Unity License
+        script: |
+          #!/usr/bin/env bash
+          set -e
+          echo "Activating Unity license..."
+          "$UNITY_HOME/Contents/MacOS/Unity" \
+            -batchmode \
+            -nographics \
+            -quit \
+            -username "$UNITY_EMAIL" \
+            -password "$UNITY_PASSWORD" \
+            -serial "$UNITY_SERIAL" \
+            -logFile "$CM_BUILD_DIR/unity_license.log"
+          cat "$CM_BUILD_DIR/unity_license.log"
+
       - name: Build iOS with Unity
         script: |
           #!/usr/bin/env bash
           set -e
           LOG_FILE="$CM_BUILD_DIR/unity_build.log"
+          mkdir -p build/iOS
+          echo "Building Unity iOS project..."
           "$UNITY_HOME/Contents/MacOS/Unity" \
             -batchmode \
             -nographics \
