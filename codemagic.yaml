@@ -16,7 +16,7 @@ workflows:
           if command -v unity-editor >/dev/null 2>&1; then
             unity-editor -version
           else
-            echo "ERROR: Unity is not installed on this build machine."
+            echo "ERROR: Unity is not installed on this machine."
             exit 1
           fi
 
@@ -31,7 +31,7 @@ workflows:
             -username "$UNITY_EMAIL" \
             -password "$UNITY_PASSWORD"
 
-      - name: Build iOS project with Unity
+      - name: Build iOS with Unity
         script: |
           unity-editor \
             -batchmode \
@@ -41,7 +41,7 @@ workflows:
             -projectPath . \
             -executeMethod Build.iOS
 
-      - name: Install Cocoapods
+      - name: Install CocoaPods
         script: |
           cd build/iOS
           pod install || true
@@ -52,7 +52,6 @@ workflows:
           $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $KEY_ID
         issuer_id: $ISSUER_ID
-        bundle_identifier: "com.cleanfun.aquablastmaster"
 
     artifacts:
       - build/iOS/ipa/*.ipa
