@@ -1,27 +1,31 @@
 workflows:
   unity-ios:
-    name: Unity iOS Build
+    name: Unity iOS Build & Upload to App Store
 
     environment:
-      unity: "2022.3.62f2"  # Use a valid Unity version from Codemagic docs
+      unity: "2022.3.62f2"   # Supported LTS Unity version on Codemagic
 
     scripts:
-      - name: Print version info
-        script: |
-          echo "UNITY_HOME is $UNITY_HOME"
-          ls -l "$UNITY_HOME"
-
       - name: Build iOS with Unity
         script: |
           #!/usr/bin/env bash
           set -e
+
+          # Unity log file
+          LOG_FILE="$CM_BUILD_DIR/unity_build.log"
+          echo "Building Unity iOS project..."
+
+          # Build Unity project
           "$UNITY_HOME/Contents/MacOS/Unity" \
             -batchmode \
             -nographics \
             -quit \
             -projectPath . \
             -executeMethod Build.iOS \
-            -logFile /dev/stdout
+            -logFile "$LOG_FILE"
+
+          # Output Unity logs to console
+          cat "$LOG_FILE"
 
       - name: Install CocoaPods
         script: |
