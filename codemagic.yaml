@@ -1,26 +1,8 @@
 workflows:
   unity-ios:
-    name: Unity iOS Build
-    environment:
-      groups:
-        - unity_credentials
-      vars:
-        UNITY_VERSION: "6000.0.59f2"
+    name: Unity iOS Build & Upload to App Store
 
     scripts:
-      - name: Check Unity version
-        script: |
-          unity-editor -version || exit 1
-
-      - name: Activate Unity license
-        script: |
-          unity-editor \
-            -batchmode \
-            -quit \
-            -serial "$UNITY_SERIAL" \
-            -username "$UNITY_EMAIL" \
-            -password "$UNITY_PASSWORD"
-
       - name: Build iOS with Unity
         script: |
           unity-editor \
@@ -37,3 +19,7 @@ workflows:
     artifacts:
       - build/iOS/**/*.ipa
       - build/iOS/**/*.xcarchive
+
+    publishing:
+      app_store_connect:
+        submit_to_app_store: true
