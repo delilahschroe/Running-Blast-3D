@@ -4,20 +4,13 @@ workflows:
     environment:
       groups:
         - unity_credentials
-        - app_store_connect
       vars:
         UNITY_VERSION: "6000.0.59f2"
-        BUNDLE_ID: "com.cleanfun.aquablastmaster"
 
     scripts:
       - name: Check Unity version
         script: |
-          if command -v unity-editor >/dev/null 2>&1; then
-            unity-editor -version
-          else
-            echo "Unity not installed."
-            exit 1
-          fi
+          unity-editor -version || exit 1
 
       - name: Activate Unity license
         script: |
@@ -41,20 +34,6 @@ workflows:
           cd build/iOS
           pod install || true
 
-    code_signing:
-      xcode:
-        app_store_connect:
-          api_key: $APP_STORE_CONNECT_PRIVATE_KEY
-          key_id: $KEY_ID
-          issuer_id: $ISSUER_ID
-
     artifacts:
-      - build/iOS/ipa/*.ipa
-      - build/iOS/Unity-iPhone.xcarchive
-
-    publishing:
-      app_store_connect:
-        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
-        key_id: $KEY_ID
-        issuer_id: $ISSUER_ID
-        submit_to_testflight: true
+      - build/iOS/**/*.ipa
+      - build/iOS/**/*.xcarchive
