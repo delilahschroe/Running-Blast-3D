@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 2704cf8e127d541f1888d96429308645
+timeCreated: 1514387178
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Interface/UniWebViewAndroidStaticListener.cs
+  uploadId: 766278

@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d09054fcc76964295a49868566075973
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Editor/AndroidManifest.cs
+  uploadId: 766278

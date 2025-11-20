@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: a403a09e241a0480a957591ea60fb785
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Editor/UniWebViewEditorSettings.cs
+  uploadId: 766278

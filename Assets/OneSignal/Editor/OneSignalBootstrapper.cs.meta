@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: dfebe7ee667c84688aa568c08f9f29b4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/OneSignalBootstrapper.cs
+  uploadId: 750708

@@ -1,0 +1,14 @@
+﻿fileFormatVersion: 2
+guid: 93c317c24787c49479c4ac321b8f288b
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Attribution/OneSignal.UnityPackage.Attribution.asmdef
+  uploadId: 750708

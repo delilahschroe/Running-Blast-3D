@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: cc9536923432b4fca91e2381f81fc28d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/PackageManagement/ScopeRegistry.cs
+  uploadId: 750708

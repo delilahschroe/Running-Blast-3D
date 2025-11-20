@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7ee8c3eb642344b08f4ceeb53d70cd1
+timeCreated: 1497057465
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/CHANGELOG.md
+  uploadId: 766278

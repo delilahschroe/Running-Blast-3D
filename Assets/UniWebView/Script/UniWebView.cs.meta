@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 598e18fb001004a81960f552978ecf4e
+timeCreated: 1491898971
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebView.cs
+  uploadId: 766278

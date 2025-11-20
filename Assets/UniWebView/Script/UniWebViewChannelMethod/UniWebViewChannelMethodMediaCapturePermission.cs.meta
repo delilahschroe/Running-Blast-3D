@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 31347bc762ad46fda0634683da0201ac
+timeCreated: 1708439899
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewChannelMethod/UniWebViewChannelMethodMediaCapturePermission.cs
+  uploadId: 766278

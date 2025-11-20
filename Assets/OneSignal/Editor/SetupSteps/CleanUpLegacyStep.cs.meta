@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: de9844472e1e484d80f30d3b20d9b5d1
+timeCreated: 1625844246
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/SetupSteps/CleanUpLegacyStep.cs
+  uploadId: 750708

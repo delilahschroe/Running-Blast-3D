@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 9a51fd6394dc49ed954d995b9f7b0bbc
+timeCreated: 1655992593
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewAuthentication/UniWebViewAuthenticationFlowGoogle.cs
+  uploadId: 766278

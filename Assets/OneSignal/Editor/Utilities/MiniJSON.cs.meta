@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: a32dd8bed71e408592bf4d9586c53a62
+timeCreated: 1645039639
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/Utilities/MiniJSON.cs
+  uploadId: 750708

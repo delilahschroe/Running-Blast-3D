@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b9534e804db602489afdcf8b50452da
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/CHANGELOG.md
+  uploadId: 750708

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: e1fb4e291b944fa8b8a114f076f06da9
+timeCreated: 1682064771
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewChannelMethod/UniWebViewChannelMethodHandleRequest.cs
+  uploadId: 766278

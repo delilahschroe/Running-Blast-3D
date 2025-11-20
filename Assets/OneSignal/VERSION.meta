@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: f0bcc125741c0a444887493c2af0768d
+DefaultImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/VERSION
+  uploadId: 750708

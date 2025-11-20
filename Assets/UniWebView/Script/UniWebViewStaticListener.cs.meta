@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 17a82aa0398d47948eaf456b1c3f4716
+timeCreated: 1696325753
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewStaticListener.cs
+  uploadId: 766278

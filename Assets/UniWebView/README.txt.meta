@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 95440ce70c5e14d6e96e166c45f7cf6d
+timeCreated: 1499302025
+licenseType: Store
+TextScriptImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/README.txt
+  uploadId: 766278

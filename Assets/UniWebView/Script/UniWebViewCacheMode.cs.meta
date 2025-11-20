@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: af9091341ad1451a88060e20c2dc953f
+timeCreated: 1705494877
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewCacheMode.cs
+  uploadId: 766278

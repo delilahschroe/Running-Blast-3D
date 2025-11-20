@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 259f6dcd6fd994cd0b6b2115e2d63128
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/Resources/OneSignalFileInventory.asset
+  uploadId: 750708

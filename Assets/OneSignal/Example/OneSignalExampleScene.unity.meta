@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 54284d014d2241544a24b57b13c09ac8
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Example/OneSignalExampleScene.unity
+  uploadId: 750708

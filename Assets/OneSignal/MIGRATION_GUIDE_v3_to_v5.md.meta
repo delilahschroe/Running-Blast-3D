@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 34481508adb3c45baadb53ce4ab51e35
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/MIGRATION_GUIDE_v3_to_v5.md
+  uploadId: 750708

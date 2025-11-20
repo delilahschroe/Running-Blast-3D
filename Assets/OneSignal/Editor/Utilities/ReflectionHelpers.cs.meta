@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 427de28d9dd04c9ab4eba7aeb5d683ab
+timeCreated: 1645039708
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/Utilities/ReflectionHelpers.cs
+  uploadId: 750708

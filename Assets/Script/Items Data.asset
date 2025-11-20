@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d4b6daa7ca45a74cabc113ce02c40ac, type: 3}
+  m_Name: Items Data
+  m_EditorClassIdentifier: 
+  itemData:
+  - prefabs: {fileID: 6153353920373466193, guid: 94b0fbde9cc78964483da0d8be864cc9, type: 3}
+    type: 0
+    effectColor: {r: 0, g: 1, b: 0.023529412, a: 0}
+  - prefabs: {fileID: 8672550525649839674, guid: 7528245985bd4d94595702429916d953, type: 3}
+    type: 1
+    effectColor: {r: 0, g: 1, b: 0.023529412, a: 0}
+  - prefabs: {fileID: 3588291556987628413, guid: 84ad1de6dd72b5f47b968f46b8312511, type: 3}
+    type: 2
+    effectColor: {r: 0, g: 1, b: 0.023529412, a: 0}
+  - prefabs: {fileID: 4056109686151841677, guid: 7f23008592c20c14a9f5330fdc4f2a68, type: 3}
+    type: 3
+    effectColor: {r: 1, g: 0.6901961, b: 0, a: 0}
+  - prefabs: {fileID: 3798421498962204498, guid: c3ca41f1591c5e74dbe93cf886f54f0f, type: 3}
+    type: 4
+    effectColor: {r: 1, g: 0, b: 0.99215686, a: 0}
+  - prefabs: {fileID: 4955139321402726787, guid: ab46e8bb41e5a2840b51c005382f1da7, type: 3}
+    type: 5
+    effectColor: {r: 0, g: 1, b: 0.023529412, a: 0}
+  - prefabs: {fileID: 3116398269298797044, guid: 19fa22eb1196f6b4a8237304077159cf, type: 3}
+    type: 6
+    effectColor: {r: 1, g: 0.07058824, b: 0, a: 0}
+  - prefabs: {fileID: 4810904651443448505, guid: 17e4f0e94c20825428aa4d8b4a9773ca, type: 3}
+    type: 7
+    effectColor: {r: 0, g: 1, b: 0.023529412, a: 0}
+  - prefabs: {fileID: 5860227701644736770, guid: baeb4cf7069199845a5ce4d5e4eff701, type: 3}
+    type: 8
+    effectColor: {r: 1, g: 0.47843137, b: 0, a: 0}
+  - prefabs: {fileID: 5082867462039816462, guid: fa8179343e38cc0489dc6b27ef37b1ea, type: 3}
+    type: 9
+    effectColor: {r: 0, g: 1, b: 0.023529412, a: 0}

@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: a28dab59edddfb3448f1fd9318f85c32
+timeCreated: 1625590596
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Example/OneSignal.UnityPackage.Example.asmdef
+  uploadId: 750708

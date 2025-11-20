@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 86840692470304a76b6d2ac73771b7af
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewAuthentication/UniWebViewAuthenticationFlowTwitter.cs
+  uploadId: 766278

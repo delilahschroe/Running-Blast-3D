@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: e5e52f46b3fba4e1c868230b0da9fd5f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Script/UniWebViewAuthentication/UniWebViewAuthenticationSession.cs
+  uploadId: 766278

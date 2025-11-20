@@ -1,0 +1,10 @@
+﻿fileFormatVersion: 2
+guid: 851966eae8b048bdbb39d471e60eef84
+timeCreated: 1626184661
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/Editor/AssemblyInfo.cs
+  uploadId: 750708

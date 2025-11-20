@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4ca033ee547ec451c8a2d3c33d7620ad
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/UniWebView-CSharp.asmdef
+  uploadId: 766278

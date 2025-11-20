@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: dfd6cf1eae32735418c56ad0029317ca
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 193316
+  packageName: OneSignal SDK
+  packageVersion: 5.1.12
+  assetPath: Assets/OneSignal/LICENSE.md
+  uploadId: 750708

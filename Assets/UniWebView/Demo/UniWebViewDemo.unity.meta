@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 938c077f40a814d4584ce2ad17947cf3
+timeCreated: 1536753573
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Demo/UniWebViewDemo.unity
+  uploadId: 766278

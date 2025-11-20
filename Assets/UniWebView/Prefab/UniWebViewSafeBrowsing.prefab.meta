@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2d6c4899a63004f16bb4f791176f4ad3
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 229334
+  packageName: UniWebView 5
+  packageVersion: 5.17.0
+  assetPath: Assets/UniWebView/Prefab/UniWebViewSafeBrowsing.prefab
+  uploadId: 766278
