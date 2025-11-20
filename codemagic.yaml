@@ -2,15 +2,21 @@ workflows:
   unity-ios:
     name: Unity iOS Build & Upload to App Store
 
-    # --- Environment section ---
     environment:
       vars:
-        UNITY_VERSION: "6000.0.59f2"   # <-- This is where you put it
+        UNITY_VERSION: "6000.0.59f2"   # Unity version to install
 
     scripts:
       - name: Build iOS with Unity
         script: |
-          unity-editor \
+          #!/usr/bin/env bash
+          set -e
+
+          # Full path to Unity executable on Codemagic
+          UNITY_PATH="/Applications/Unity/Hub/Editor/6000.0.59f2/Unity.app/Contents/MacOS/Unity"
+
+          # Build Unity iOS project
+          $UNITY_PATH \
             -batchmode \
             -nographics \
             -quit \
