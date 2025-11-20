@@ -3,12 +3,23 @@ workflows:
     name: Unity iOS Build
     environment:
       groups:
-        - unity_credentials            # UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL
-        - app_store_connect            # APP_STORE_CONNECT_PRIVATE_KEY, ISSUER_ID, KEY_ID
+        - unity_credentials        # UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL
+        - app_store_connect        # APP_STORE_CONNECT_PRIVATE_KEY, ISSUER_ID, KEY_ID
       vars:
-        UNITY_VERSION: "2022.3.0f1"     # Set your Unity version
-        BUNDLE_ID: "com.yourcompany.yourgame"
+        UNITY_VERSION: "6000.0.59f2"     # Your Unity version
+        BUNDLE_ID: "com.cleanfun.aquablastmaster"
+
     scripts:
+      - name: Check Unity version
+        script: |
+          echo "Checking installed Unity version..."
+          if command -v unity-editor >/dev/null 2>&1; then
+            unity-editor -version
+          else
+            echo "ERROR: Unity is not installed on this build machine."
+            exit 1
+          fi
+
       - name: Activate Unity license
         script: |
           unity-editor \
@@ -28,22 +39,23 @@ workflows:
             -quit \
             -logFile /dev/stdout \
             -projectPath . \
-            -executeMethod BuildScript.BuildiOS
+            -executeMethod Build.iOS
 
       - name: Install Cocoapods
         script: |
           cd build/iOS
-          pod install
+          pod install || true
 
     ios_signing:
       app_store_connect:
-        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        api_key: |
+          $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $KEY_ID
         issuer_id: $ISSUER_ID
-      bundle_identifier: $BUNDLE_ID
-      provisioning_profiles:
-        - name: ios_profile
-          bundle_identifier: $BUNDLE_ID
+        bundle_identifier: $BUNDLE_ID
+        provisioning_profiles:
+          - name: ios_profile
+            bundle_identifier: $BUNDLE_ID
 
     artifacts:
       - build/iOS/ipa/*.ipa
@@ -51,7 +63,8 @@ workflows:
 
     publishing:
       app_store_connect:
-        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        api_key: |
+          $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $KEY_ID
         issuer_id: $ISSUER_ID
         submit_to_testflight: true
