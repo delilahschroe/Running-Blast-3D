@@ -1,21 +1,16 @@
 workflows:
   unity-ios:
-    name: Unity iOS Build & Upload to App Store
+    name: Unity iOS Build & Upload to App Store
 
     environment:
-      unity: "2022.3.62f2"   # Supported LTS Unity version on Codemagic
+      unity: "6000.2.3f1"
 
     scripts:
       - name: Build iOS with Unity
         script: |
           #!/usr/bin/env bash
           set -e
-
-          # Unity log file
           LOG_FILE="$CM_BUILD_DIR/unity_build.log"
-          echo "Building Unity iOS project..."
-
-          # Build Unity project
           "$UNITY_HOME/Contents/MacOS/Unity" \
             -batchmode \
             -nographics \
@@ -23,8 +18,6 @@ workflows:
             -projectPath . \
             -executeMethod Build.iOS \
             -logFile "$LOG_FILE"
-
-          # Output Unity logs to console
           cat "$LOG_FILE"
 
       - name: Install CocoaPods
