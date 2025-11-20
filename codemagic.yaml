@@ -22,5 +22,8 @@ workflows:
 
     publishing:
       app_store_connect:
-        use_integration: true
+        # Use App Store Connect API key stored as environment variables
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $KEY_ID
+        issuer_id: $ISSUER_ID
         submit_to_app_store: true
