@@ -3,8 +3,8 @@ workflows:
     name: Unity iOS Build
     environment:
       groups:
-        - unity_credentials        # UNITY_EMAIL, UNITY_PASSWORD, UNITY_SERIAL
-        - app_store_connect        # APP_STORE_CONNECT_PRIVATE_KEY, ISSUER_ID, KEY_ID
+        - unity_credentials
+        - app_store_connect
       vars:
         UNITY_VERSION: "6000.0.59f2"
         BUNDLE_ID: "com.cleanfun.aquablastmaster"
@@ -12,11 +12,10 @@ workflows:
     scripts:
       - name: Check Unity version
         script: |
-          echo "Checking installed Unity version..."
           if command -v unity-editor >/dev/null 2>&1; then
             unity-editor -version
           else
-            echo "ERROR: Unity is not installed on this machine."
+            echo "Unity not installed."
             exit 1
           fi
 
@@ -24,9 +23,7 @@ workflows:
         script: |
           unity-editor \
             -batchmode \
-            -nographics \
             -quit \
-            -logFile /dev/stdout \
             -serial "$UNITY_SERIAL" \
             -username "$UNITY_EMAIL" \
             -password "$UNITY_PASSWORD"
@@ -35,9 +32,7 @@ workflows:
         script: |
           unity-editor \
             -batchmode \
-            -nographics \
             -quit \
-            -logFile /dev/stdout \
             -projectPath . \
             -executeMethod Build.iOS
 
@@ -46,12 +41,12 @@ workflows:
           cd build/iOS
           pod install || true
 
-    ios_signing:
-      app_store_connect:
-        api_key: |
-          $APP_STORE_CONNECT_PRIVATE_KEY
-        key_id: $KEY_ID
-        issuer_id: $ISSUER_ID
+    code_signing:
+      xcode:
+        app_store_connect:
+          api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+          key_id: $KEY_ID
+          issuer_id: $ISSUER_ID
 
     artifacts:
       - build/iOS/ipa/*.ipa
@@ -59,8 +54,7 @@ workflows:
 
     publishing:
       app_store_connect:
-        api_key: |
-          $APP_STORE_CONNECT_PRIVATE_KEY
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
         key_id: $KEY_ID
         issuer_id: $ISSUER_ID
         submit_to_testflight: true
